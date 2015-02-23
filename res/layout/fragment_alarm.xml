@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/screen"
+    android:background="#000000"
+    android:clipChildren="false"
+    android:orientation="vertical">       
+    
+    <RelativeLayout
+        android:id="@+id/clock_face"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+                
+        <ImageView
+            android:id="@+id/clock_ring"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/clock_face_description"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/clock_face" />     
+        
+        <TextView
+            android:id="@+id/center_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold|normal" 
+            android:text="AM"/>
+       
+	</RelativeLayout>
+	
+	
+	
+	<LinearLayout
+        android:id="@+id/details_view"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:layout_alignParentBottom="true">
+        
+        <TextView
+            android:id="@+id/remaining_time_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Time left: 00 hours 00 minutes"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/alarm_time_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="00:00"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold|normal" />
+
+            <TextView
+                android:id="@+id/alarm_am_pm_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="AM"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold|normal" />
+            
+            
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/repeat_textView"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ToggleButton
+                    android:id="@+id/sunday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#02094b"
+                    android:padding="2dp"
+                    android:textColor="#008000"
+                    android:textOff="@string/sunday"
+                    android:textOn="@string/sunday"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ToggleButton
+                    android:id="@+id/monday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#02094b"
+                    android:padding="2dp"
+                    android:textColor="#008000"
+                    android:textOff="@string/monday"
+                    android:textOn="@string/monday"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ToggleButton
+                    android:id="@+id/tuesday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#02094b"
+                    android:padding="2dp"
+                    android:textColor="#008000"
+                    android:textOff="@string/tuesday"
+                    android:textOn="@string/tuesday"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ToggleButton
+                    android:id="@+id/wednesday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#02094b"
+                    android:padding="2dp"
+                    android:textColor="#008000"
+                    android:textOff="@string/wednesday"
+                    android:textOn="@string/wednesday"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ToggleButton
+                    android:id="@+id/thursday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#02094b"
+                    android:padding="2dp"
+                    android:textColor="#008000"
+                    android:textOff="@string/thursday"
+                    android:textOn="@string/thursday"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ToggleButton
+                    android:id="@+id/friday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#02094b"
+                    android:padding="2dp"
+                    android:textColor="#008000"
+                    android:textOff="@string/friday"
+                    android:textOn="@string/friday"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ToggleButton
+                    android:id="@+id/saturday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#02094b"
+                    android:padding="2dp"
+                    android:textColor="#008000"
+                    android:textOff="@string/saturday"
+                    android:textOn="@string/saturday"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/cancel_text"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="24dp"
+                    android:background="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/delete_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/delete_text"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="24dp"
+                    android:background="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/save_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/save_text"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+	
+</RelativeLayout>
